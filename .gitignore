@@ -36,6 +36,23 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
-# generated native folders
+# generated native folders (ios only — android kept for Android Studio builds)
 /ios
-/android
+
+
+# Android signing credentials
+credentials/
+*.keystore
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# IDE
+.idea/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example

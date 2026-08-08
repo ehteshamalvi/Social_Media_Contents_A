@@ -1,25 +1,50 @@
 {
   "expo": {
-    "name": "mobile",
-    "slug": "mobile",
+    "name": "Creator Workspace",
+    "slug": "creator-workspace",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#131315"
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Allow Creator Workspace to access your photos and reels for generating social posts.",
+        "NSCameraUsageDescription": "Allow Creator Workspace to capture photos and reels for generating social posts."
+      }
     },
     "android": {
+      "package": "com.creatorworkspace.app",
+      "versionCode": 1,
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#131315",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
+      "permissions": [
+        "READ_MEDIA_IMAGES",
+        "READ_MEDIA_VIDEO",
+        "READ_EXTERNAL_STORAGE"
+      ],
       "predictiveBackGestureEnabled": false
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Creator Workspace to access your photos and reels for generating social posts."
+        }
+      ],
+      "expo-font"
+    ]
   }
 }
