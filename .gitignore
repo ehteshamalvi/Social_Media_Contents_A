@@ -56,3 +56,7 @@ credentials/
 .env
 .env.*
 !.env.example
+
+
+# Generated APK files
+apk/
